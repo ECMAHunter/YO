@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>TITLE</title>
 </head>
-<body>
-
+<body ng-app="YOtest">
+    <div class="firstController">
+        <!--<input type="text" name="text" ng-model="title" id=""/>-->
+        <h2 ng-bind="title">{{ title }}</h2>
+    </div>
 </body>
 </html>
+<script type="text/javascript" src="http://localhost:63342/YO/lib/angular.min.js"></script>
+<script type="text/javascript">
+    angular.module('YOtest',[]).controller('firstController',['$scope', function ($scope) {
+                $scope.title = 'USER'
+            }])
+</script>
+<!--<script type="text/javascript" src="http://localhost:63342/YO/Scripts/main.js"></script>-->
