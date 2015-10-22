@@ -5,16 +5,15 @@
     <title>TITLE</title>
 </head>
 <body ng-app="YOtest">
-    <div class="firstController">
+    <div ng-controller="firstController">
         <!--<input type="text" name="text" ng-model="title" id=""/>-->
-        <h2 ng-bind="title">{{ title }}</h2>
+        <ul ng-click="targetName(this)">
+            <li ng-repeat="lists in list">
+                {{ lists.name }}
+            </li>
+        </ul>
     </div>
 </body>
 </html>
-<script type="text/javascript" src="http://localhost:63342/YO/lib/angular.min.js"></script>
-<script type="text/javascript">
-    angular.module('YOtest',[]).controller('firstController',['$scope', function ($scope) {
-                $scope.title = 'USER'
-            }])
-</script>
-<!--<script type="text/javascript" src="http://localhost:63342/YO/Scripts/main.js"></script>-->
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script type="text/javascript" src="Scripts/main.js"></script>
